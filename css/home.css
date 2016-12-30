@@ -208,6 +208,90 @@ li.a:hover{
 #logo img{
     width: 150px;
 }
+/*----------------------------购物车--------------------------------------*/
+#shopping_cart {
+    width: 140px;
+    height: 35px;
+    border: 1px solid #e0e0e0;
+    float: right;
+    margin-right:200px;
+    margin-top: -45px;
+    position: relative;
+}
+
+#shopping_cart span {
+    display: block;
+    width: 100%;
+    color:white;
+    height: 100%;
+    line-height: 35px
+}
+
+#shopping_cart_icon {
+    display: block;
+    width: 18px;
+    height: 14px;
+    float: left;
+    margin: 10px 10px 0 10px;
+    background: url('http://misc.360buyimg.com/jdf/1.0.0/unit/globalImages/1.0.0/jd2015img.png') no-repeat 0 -58px
+}
+
+#my_cart {
+    position: relative
+}
+
+#shopping_cart_number {
+    display: block;
+    width: 16px;
+    height: 14px;
+    border-radius: 8px 8px 8px 0;
+    background: #c81623;
+    color: #fff;
+    position: absolute;
+    top: -12px;
+    right: -18px;
+    line-height: 14px;
+    text-align: center
+}
+
+#cart_content {
+    width: 280px;
+    height: 50px;
+    padding: 10px;
+    position: absolute;
+    top: 41px;
+    left: -161px;
+    line-height: 50px
+}
+
+#cart_incon {
+    display: block;
+    width: 57px;
+    height: 49px;
+    float: left;
+    background: url('http://misc.360buyimg.com/jdf/1.0.0/unit/shoppingcart/2.0.0/i/settleup-nogoods.png') no-repeat
+}
+
+
+.yc_con {
+    position: absolute;
+    left: -1px;
+    display: none;
+    border: 1px #e0e0e0 solid;
+    z-index: 300;
+    background: #fff
+}
+.yc_btn:hover {
+    cursor: pointer;
+    background: #A6A6A6;
+    border-color: #ddd !important
+
+}
+
+.yc_btn:hover .yc_con {
+    display: block !important
+
+}
 
 #bottom-container .foot_one_a {width:1160px;height:195px;margin:0 auto;padding:15px;}
 #bottom-container .foot_one_a .img{width:230px;height:195px;float:left;border-right: 1px solid #dedede;float:left;}

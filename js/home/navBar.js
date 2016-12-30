@@ -36,8 +36,7 @@
 
             var dataList = $($.parseJSON(result));
             //    json - > jquery
-            console.log($.parseJSON(result));
-            console.log(dataList);
+
 
             dataList.each(function () {
 

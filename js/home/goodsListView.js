@@ -26,7 +26,6 @@
 
         //      使用 HTTPClient 里面的属性
         this.getJsonP(url,data,function (result) {
-            console.log(result);
 
             //      创建存放  商品列表的对象
             $(result).each(function () {
