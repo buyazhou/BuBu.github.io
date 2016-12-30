@@ -1,0 +1,81 @@
+@import "baseStyle.css";
+
+.wrap {
+    width: 60%;
+    height: 500px;
+    margin: 10px auto;
+    position: relative;
+}
+
+.wrap img {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 2s;
+}
+
+.wrap img:nth-child(1) {
+    position: relative;
+}
+
+.wrap .follow {
+    width: 150px;
+    height: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrap .follow span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid gray;
+}
+
+.wrap .follow span:hover {
+    cursor: pointer;
+}
+
+.activity {
+    width: 80%;
+    height: 86px;
+    margin: 30px auto;
+
+}
+
+.preferential {
+    height: 86px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+.activity img {
+    height: 82px;
+    border: 2px solid white;
+    margin-left: 5px;
+}
+
+.activity_a:hover {
+    transform: scale(1.1, 1.1);
+    border: 2px solid #4c4c4c;
+}
+
+.activity_b:hover {
+    transform: scale(1.1, 1.1);
+    border: 2px solid #4c4c4c;
+}
+
+.activity_c:hover {
+    transform: scale(1.1, 1.1);
+    border: 2px solid #4c4c4c;
+}
+
+.activity_d:hover {
+    transform: scale(1.1, 1.1);
+    border: 2px solid #4c4c4c;
+}

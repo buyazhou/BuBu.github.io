@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/userLogin.css">
+
+    <script src="../js/public/jquery-3.1.1.js"></script>
+</head>
+<body>
+<span class="choose"><a href="../index.html">❌</a></span>
+
+<div class="header">
+    <a href="login.html" class="btn-right">登录</a>
+    <a href="UserRegistered.html" class="btn-right">注册</a>
+
+
+    <div class="container">
+
+        <div class="login">
+            <div id="photo">
+                <img src="../images/photo.jpg" alt="头像">
+            </div>
+            <label class="input-label">
+                <input type="text" placeholder="账号" id="usernmae"/>
+            </label>
+            <label class="input-label">
+                <input type="password" placeholder="密码" id="userpwd"/>
+            </label>
+
+            <button class="btn-submit" id="login">登录</button>
+            <p class="pwd-box">
+                <a href="UserRegistered.html" class="a1">立即注册</a>
+                <a href="#" class="a2">忘记密码？</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+</div>
+
+
+</body>
+<script>
+    $(function () {
+        //记住密码切换
+        $(".pwd-box label").bind("click", function () {
+            $(this).find("b").toggleClass("active");
+        })
+
+        $("#login").bind("click", function () {
+
+            // 进行提交前的数据检查
+            if ($("#usernmae").val() == "") {
+                alert("用户名不能为空");
+                return false;
+            }
+            if ($("#userpwd").val() == "") {
+                alert("密码不能为空");
+                return false;
+            }
+
+            // 发送get请求，进行返回处理
+            $.get(
+                    "http://datainfo.duapp.com/shopdata/userinfo.php",
+                    {
+                        status: "login",
+                        userID: $("#usernmae").val(),
+                        password: $("#userpwd").val(),
+                    },
+                    function (data) {
+                        if (data == 0) {
+                            alert("用户名不存在，请检查");
+                        } else if (data == 2) {
+                            alert("用户名密码不符");
+                        } else {
+                            // 跳转到个人信息页面
+                            window.location.href = "../index.html";
+                            //将用户名存储到本地存储
+                            localStorage.setItem("userID", $("#usernmae").val());
+                        }
+
+                    }
+            )
+        })
+
+    })
+
+</script>
+</html>

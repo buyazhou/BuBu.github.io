@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="../css/userRegistered.css">
+    <script src="../js/public/jquery-3.1.1.js"></script>
+</head>
+<body>
+<span class="choose"><a href="../index.html">❌</a></span>
+
+<div class="header">
+    <a href="login.html" class="btn-right">登录</a>
+    <a href="UserRegistered.html" class="btn-right">注册</a>
+
+
+
+    <div class="container">
+
+        <div class="register">
+            <label class="input-label">
+                <input type="text" placeholder="账号" id="user"/>
+            </label>
+            <label class="input-label">
+                <input type="password" placeholder="密码" id="pwd"/>
+            </label>
+            <label class="input-label">
+                <input type="password" placeholder="重复密码" id="repwd"/>
+            </label>
+            <label class="input-label">
+                <input type="email" placeholder="邮箱" id="email"/>
+            </label>
+
+            <button class="btn-submit" id="register">同意服务协议并且注册</button>
+        </div>
+
+    </div>
+</div>
+<div class="footer">
+
+</div>
+
+</body>
+<script>
+    $(function () {
+        $("#register").bind("click", function () {
+
+            // 进行提交前的数据检查
+            if ($("#user").val() == "") {
+                alert("用户名不能为空");
+                return false;
+            }
+            if ($("#pwd").val() == "") {
+                alert("密码不能为空");
+                return false;
+            }
+            if ($("#pwd").val() != $("#repwd").val()) {
+                alert("两次密码输入不一致，请正确输入");
+                return false;
+            }
+
+
+            // 发送get请求，进行返回处理
+            $.get(
+                    "http://datainfo.duapp.com/shopdata/userinfo.php",
+                    {
+                        status: "register",
+                        userID: $("#user").val(),
+                        password: $("#pwd").val(),
+                    },
+                    function (data) {
+                        if (data == 0) {
+                            alert("用户名已经注册，请更换");
+                        }
+                        if (data == 1) {
+                            alert("恭喜您注册成功");
+                        }
+                        if (data == 2) {
+                            alert("数据包出错啦");
+                        }
+                    }
+            )
+        })
+
+    })
+</script>
+</html>

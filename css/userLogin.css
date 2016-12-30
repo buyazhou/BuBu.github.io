@@ -1,0 +1,122 @@
+@import "baseStyle.css";
+
+body {
+    background: #F7F7F7;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -185px;
+    margin-top: -210px;
+    height: 420px;
+    width: 340px;
+    font-size: 18px;
+    -webkit-box-shadow: 0 0 10px #A6A6A6;
+    background: #fff;
+}
+.btn-right{
+    text-align: center;
+    width: 170px;
+    padding:15px 0;
+    line-height: 20px;
+    font-size: 18px;
+    color: #545454;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+.btn-right:hover{
+    border-bottom: 2px solid #A6A6A6;
+}
+.input-label{
+    height: 50px;
+    width: 200px;
+    margin-left: 68px;
+    display: inline-block;
+
+}
+#usernmae,#userpwd{
+    width: 200px;
+    margin:0 auto;
+    height: 30px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+#photo{
+    border-radius: 80px;
+    border: 1px solid #ccc;
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    overflow: hidden;
+    clear: both;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#photo img{
+    width:80px;
+    cursor: pointer;
+}
+.btn-submit{
+    height: 30px;
+    width: 200px;
+    margin:0 auto;
+    display: block;
+    position: relative;
+    background-color: white;
+    color: #a6a6a6;
+}
+#login{
+    width: 200px;
+    margin:0 auto;
+    height: 30px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    font-size: 13px;
+    border:1px solid #A6A6A6;
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+}
+.btn-submit:hover{
+    background-color: #a6a6a6;
+    color:white;
+}
+.pwd-box{
+    font-size: 13px;
+    width: 340px;
+    margin-top: 80px;
+}
+.a1{
+    width: 100px;
+    height: 30px;
+    color:#A6A6A6;
+    float: left;
+    margin-left: 50px;
+}
+.a2{
+    width: 100px;
+    height: 30px;
+    color:#A6A6A6;
+    float: right;
+}
+.choose{
+    float: right;
+    margin: 10% 30% ;
+
+}
+
+.choose:hover{
+    animation: action 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@keyframes action {
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+
